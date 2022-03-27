@@ -23,7 +23,7 @@ const AboutUs = () => {
         <div className={styles.features}>
           <div className={styles.feature}>
             <div className={styles.featureImage}>
-              <img src={image1} alt="Connecting Alumni Picture" />
+              <img src={image2} alt="Connecting Alumni Picture" />
             </div>
             <div className={styles.featureDes}>
               <h2>Connecting Alumni across India</h2>
@@ -47,7 +47,7 @@ const AboutUs = () => {
             </div>
             <div className={styles.featureImage}>
               {" "}
-              <img src={image2} alt="Recruiting Opporunities" />
+              <img src={image1} alt="Recruiting Opporunities" />
             </div>
           </div>
         </div>

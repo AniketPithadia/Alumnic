@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import useInput from "../../hooks/use-input";
 import { storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "@firebase/storage";
+import serverEndpoint from "../../endpoints";
 
 const RegisterForm = () => {
   const history = useHistory();
@@ -36,9 +37,6 @@ const RegisterForm = () => {
   const handleUpload = (e) => {
     e.preventDefault();
     upload({ file: docImg, label: "img" });
-    setTimeout(() => {
-      setUploaded(0);
-    }, 3000);
   };
 
   const {
@@ -161,20 +159,17 @@ const RegisterForm = () => {
     setIsLoading(true);
     if (!isLogin) {
     } else {
-      fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDG4dzhSlaCJqFGZp8c8Kjzl17ImgOA6FI",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            email: enteredEmail,
-            password: enteredPassword,
-            returnSecureToken: true,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      ).then((res) => {
+      fetch(serverEndpoint + "/signup", {
+        method: "POST",
+        body: JSON.stringify({
+          email: enteredEmail,
+          password: enteredPassword,
+          returnSecureToken: true,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((res) => {
         setIsLoading(false);
         if (res.ok) {
           console.log(res);
@@ -204,10 +199,9 @@ const RegisterForm = () => {
     }, 1500);
   };
   const redirectHandler = () => {
-    handleUpload();
-    setTimeout(() => {
-      history.replace("/login");
-    }, 2500);
+    // setTimeout(() => {
+    //   // history.replace("/login");
+    // }, 2500);
   };
 
   const firstNameInputClasses = firstNameInputHasError
@@ -500,8 +494,10 @@ const RegisterForm = () => {
               className="formFieldInput"
               name="docImg"
               onChange={(e) => setDocImg(e.target.files[0])}
-              value={enteredDocumentUrl}
             />
+            <button className="addProductButton" onClick={handleUpload}>
+              Upload
+            </button>
             {documentUrlInputHasError && (
               <p className="error-text">Enter Valid document url </p>
             )}
@@ -518,15 +514,10 @@ const RegisterForm = () => {
 
           {/* Buttons */}
           <div className="form-actions">
-            {!isLoading && uploaded === 0 && (
-              <button
-                className="formFieldButton addProductButton"
-                onClick={handleUpload}
-              >
-                Upload
-              </button>
-            )}
-            {!isLoading && uploaded === 1 && (
+            {/* {(!isLoading || uploaded === 1) && (
+              
+            )}{" "} */}
+            {!isLoading && (
               <button
                 type="submit"
                 disabled={!formIsValid}

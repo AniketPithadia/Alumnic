@@ -34,7 +34,7 @@
 .contact-header .contact-description {
   max-width: 600px;
   margin-top: 2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgba(99, 96, 96, 0.911);
   font-weight: 400;
 }
@@ -193,6 +193,9 @@
 }
 .con-form-control label svg {
   margin-right: 0.3rem;
+}
+.con-form-control input {
+  color: black;
 }
 .con-form-control input,
 .con-form-control select,

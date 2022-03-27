@@ -115,6 +115,21 @@ function Contact() {
                   Email
                 </label>
                 <input type="email" id="email" autoComplete="off" />
+                {/* <label className="formFieldLabel" htmlFor="degree">
+                  <p>Choose type of degree</p>
+                </label>
+                <input
+                  list="userType"
+                  className=""
+                  name="userType"
+                  placeholder="Choose your Who are you?"
+                  id="userType"
+                />
+                <datalist id="userType">
+                  <option value="College Authority" />
+                  <option value="MSDE Authority" />
+                  <option value="Alumni" />
+                </datalist> */}
               </div>
               <div className="con-form-textarea">
                 <textarea

@@ -1,0 +1,21 @@
+.user-image {
+  width: 90px;
+  height: 90px;
+  background-color: Irgb(233, 233, 233);
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-photo {
+  border-radius: 45px;
+  width: 80px;
+}
+.user-testimonial {
+  font-size: large;
+}
+.slide {
+  background-color: whiter;
+  padding: 3rem;
+  margin: 2rem 1rem;
+}

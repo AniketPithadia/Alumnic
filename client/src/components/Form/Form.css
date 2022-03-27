@@ -1,0 +1,222 @@
+.form {
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+.appAside {
+  width: 50%;
+  background-image: linear-gradient(rgba(2, 2, 2, 0.438), rgba(0, 0, 0, 0.445)),
+    url("../../assets/images/form-backgroung.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.appForm {
+  width: 50%;
+  background-color: #12130f;
+  padding: 25px 40px;
+  overflow: auto;
+  color: #000;
+}
+
+.pageSwitcher {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10%;
+}
+.pageSwitcherItem {
+  background-color: rgb(16, 116, 94);
+  color: #000;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.pageSwitcherItem-active {
+  background-color: #07c4c4;
+  color: rgb(7, 7, 7);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(174, 240, 226) 0%,
+    rgb(21, 251, 255) 90%
+  );
+  font-weight: 700;
+}
+
+.pageSwitcherItem:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.pageSwitcherItem:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.formCenter {
+  margin-bottom: 100px;
+}
+
+.formTitle {
+  color: #707c8b;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.formTitleLink {
+  color: #707c8b;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+
+.formTitleLink:first-child {
+  margin-left: 0;
+}
+
+.formTitleLink-active {
+  color: white;
+  border-bottom: 1px solid #1edbdb;
+}
+
+.form-control {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+}
+
+.formFieldLabel {
+  display: block;
+  font-size: 1.1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+.formFieldLabel svg {
+  margin-right: 0.4rem;
+}
+
+.formFieldLabel:last-child {
+  flex-direction: row;
+}
+.formFieldInput {
+  width: 85%;
+  background-color: #12130f !important;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 1px solid #445366;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+.formFieldInput:focus {
+  background-color: transparent;
+}
+.formFieldInput::selection {
+  background-color: transparent;
+}
+.formFieldInput::placeholder {
+  color: #616e7f;
+  font-size: 0.9rem;
+}
+datalist {
+  color: white;
+}
+input[type="list"] {
+  color: white;
+}
+input[type="checkbox"] {
+  transform: scale(2);
+}
+.error-text {
+  color: rgb(247, 52, 52);
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+.checkbox-field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-actions {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.formFieldButton {
+  background-color: #1edbdb;
+  color: rgb(10, 10, 10);
+  border: none;
+  width: 40%;
+  outline: none;
+  border-radius: 30px;
+  padding: 15px 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-self: center;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.formFieldButton:hover {
+  color: rgb(255, 255, 255);
+  background-image: radial-gradient(
+    circle farthest-corner at 92.3% 71.5%,
+    rgb(52, 109, 189) 0%,
+    rgb(68, 230, 200) 90%
+  );
+}
+.formFieldLink {
+  color: #66707d;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid #1edbdb;
+  padding-bottom: 5px;
+  width: 50%;
+  text-align: center;
+  margin-top: 1rem;
+  align-self: center;
+  transition: all ease 0.4s;
+}
+
+.formFieldLink:hover {
+  color: rgb(84, 247, 217);
+}
+.formFieldCheckboxLabel {
+  color: #faf9f9;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.formFieldTermsLink {
+  color: white;
+  border-bottom: 1px solid #6b5b95;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  margin-left: 5px;
+}
+
+.socialMediaButtons {
+  padding: 10px 100px 10px 0px;
+}
+button:disabled {
+  cursor: not-allowed;
+}

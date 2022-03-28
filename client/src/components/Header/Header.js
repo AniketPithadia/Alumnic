@@ -24,18 +24,18 @@ const Header = () => {
         </div>
         <div className={styles.links_container}>
           <li>
-            <NavLink exact to="/">
+            <NavLink exact to="/" activeClassName={styles.active}>
               Home
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/about" activeClassName="active">
+            <NavLink to="/about" activeClassName={styles.active}>
               About Us
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" activeClassName="active">
+            <NavLink to="/contact" activeClassName={styles.active}>
               Contact
             </NavLink>
           </li>

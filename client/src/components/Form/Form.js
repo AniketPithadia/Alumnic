@@ -22,6 +22,23 @@ const Form = () => {
           <div className="appAside" />
           <div className="appForm">
             <div className="pageSwitcher">
+              {/* <div> */}
+              {/* <label className="" htmlFor="userType">
+                  <p>Who are you?</p>
+                </label>
+                <input
+                  list="userType"
+                  className=""
+                  name="userType"
+                  placeholder="Choose your Who are you?"
+                  id="userType"
+                />
+                <datalist id="userType">
+                  <option value="College Authority" />
+                  <option value="MSDE Authority" />
+                  <option value="Alumni" />
+                </datalist>
+              </div> */}
               <NavLink
                 to="/login"
                 activeClassName="pageSwitcherItem-active"

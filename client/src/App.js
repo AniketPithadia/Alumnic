@@ -3,6 +3,7 @@ import "./App.css";
 import Homepage from "./components/Homepage/Homepage";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Form from "./components/Form/Form";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path="/about">
           <AboutUs />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
         <Route path="/form">
           <Form />
